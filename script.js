@@ -59,8 +59,9 @@ function ListarTareas(){
             boxTarea.appendChild(lista);
 
         })
-
     }
+
+    LocalSetStorage();
 }
 
 
@@ -70,4 +71,9 @@ function CleanForm(){
     while(boxTarea.firstChild){
         boxTarea.removeChild(boxTarea.firstChild)
     }
+}
+
+
+function LocalSetStorage(){
+    localStorage.setItem('', JSON.stringify(tarea));
 }
